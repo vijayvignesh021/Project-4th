@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="text-center" lang="en">
+
+<head>
+    <base href="/static/project4app/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>search</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/lf.css">
+    <link rel="stylesheet" href="assets/css/ms.css">
+    <link rel="stylesheet" href="assets/css/musaa.css">
+    <link rel="stylesheet" href="assets/css/st.css">
+</head>
+
+<body class="text-center">   
+     <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="/">TapTvl</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="/track">View MY BUS</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="/login">LOGIN&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form method = "post" action="/root/">
+        {% csrf_token %}
+    <input class="form-control-lg" type="from" style="padding-bottom: 0px;padding-right: 0px;margin-right: 1px;margin-top: 167px;background: rgb(77,81,84);border-radius: 41px;border-width: 1px;border-color: rgb(255,255,255);" name="from" placeholder="From">
+    <input class="form-control-lg" type="to" style="padding-right: 0px;margin-right: 1px;background: rgb(77,81,84);border-radius: 41px;border-width: 1px;border-color: rgb(255,255,255);padding-bottom: 0px;margin-top: 39px;" name="to" placeholder="To">
+    <div ><button class="btn btn-primary btn-lg font-monospace fs-6 fw-semibold text-center text-bg-primary border rounded border-1" type="submit" style="margin-top: 23px;">SEARCH</button></div>
+    </form>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
