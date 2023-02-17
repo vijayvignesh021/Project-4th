@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html style="scroll-behavior: smooth;">
+<html lang="en">
 
 <head>
+    <base href="/static/project4app/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - TapTvl</title>
-    <link rel="stylesheet" href="static/project4app/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets_indx/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
-    <link rel="stylesheet" href="static/project4app/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="static/project4app/assets/css/Login-Form-Basic-icons.css">
-    <link rel="stylesheet" href="static/project4app/assets/css/MUSA_timeline-timeline.css">
-    <link rel="stylesheet" href="static/project4app/assets/css/MUSA_timeline.css">
+    <link rel="stylesheet" href="assets_indx/fonts/font-awesome.min.css">
 </head>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="/">TapTvl</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <button class="find-state"> find my location</button>
-                    <li class="nav-item nav-link"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="/track">View MY BUS</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="/login">LOGIN&nbsp;</a></li>
-                </ul>
-            </div>
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77"><nav id="mainNav" class="navbar navbar-light navbar-expand-md fixed-top">
+    <div class="container"><a class="navbar-brand" href="/">TapTvl</a><button class="navbar-toggler navbar-toggler-right" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+        <div id="navbarResponsive" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <button class="find-state"> find my location</button>
+                <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
+                <li class="nav-item nav-link"><a class="nav-link" href="/track">download</a></li>
+                <li class="nav-item nav-link"><a class="nav-link" href="/login">contact</a></li>
+            </ul>
         </div>
-    </nav>
-    <header class="masthead" style="background-image:url('static/project4app/assets/img/intro-bg.jpg');">
+    </div>
+</nav>
+    <header class="masthead" style="background-image: url('assets_indx/img/intro-bg.jpg');">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">TapTvl</h1><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a>
+                        <h1 class="brand-heading">Taptvl</h1><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a>
                         <h1 class="status"></h1>
                     </div>
                 </div>
@@ -42,49 +39,40 @@
     <section class="text-center content-section" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto"  >
-                    <h2>About TapTvl</h2>
-                    <p>Hi, We are Students at SCAD institute . This is basic template</p>
-                    <p>Time is Precious . So&nbsp;<a href="/track">click here</a> don't waste time for waiting the bus stop.</p>
-                    <p>If you are provide transportation service in tirunelveli . contact us Email - xyz@taptvl.com</p>
+                <div class="col-lg-8 mx-auto">
+                    <h2>About&nbsp;</h2><p>Hi, We are Students at SCAD institute . This is basic template</p><p>Time is Precious . So&nbsp;<a href="/track">click here</a> don't waste time for waiting the bus stop.</p>
+<p>If you are provide transportation service in tirunelveli . contact us Email - xyz@taptvl.com</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="text-center download-section content-section" id="download" style="background-image:url('assets/img/downloads-bg.jpg');"></section>
-    <section class="text-center content-section" id="contact"></section>
-    <div class="map-clean"></div>
-    <footer>
-        <div class="container text-center">
-            <p>Copyright ©&nbsp;Brand 2023</p>
-        </div>
-    </footer>
-    <script src="static/project4app/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="static/project4app/assets/js/grayscale.js"></script>
+    <section class="text-center download-section content-section" id="download" style="background-image: url('assets_indx/img/downloads-bg.jpg');"></section>
+    <script src="assets_indx/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets_indx/js/grayscale.js"></script>
     <script>
-			const findstate = () => {
-            const status = document.querySelector('.status');
-            const success = (position) => { 
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
-                
-                const geoapiurl = 'https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=' + latitude + '&longitude=' + longitude + '&localityLanguage=en';
-                fetch(geoapiurl)
-                .then(response => response.json())
-                .then(data => {
-                    status.textContent = "City "+data.city + " speed " + position.coords.speed;
-                    console.log(data);
-                })
-            }
-            const error = () => {
-                status.textContent = 'Please enable location services';
-            }
-            navigator.geolocation.getCurrentPosition(success, error);
-			}
-			
-			document.querySelector('.find-state').addEventListener('click', findstate);
-			
-    </script>
+        const findstate = () => {
+        const status = document.querySelector('.status');
+        const success = (position) => { 
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            const geoapiurl = 'https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=' + latitude + '&longitude=' + longitude + '&localityLanguage=en';
+            fetch(geoapiurl)
+            .then(response => response.json())
+            .then(data => {
+                status.textContent = "City :"+data.city ;
+                console.log(data);
+            })
+        }
+        const error = () => {
+            status.textContent = 'Please enable location services';
+        }
+        navigator.geolocation.getCurrentPosition(success, error);
+        }
+        
+        document.querySelector('.find-state').addEventListener('click', findstate);
+        
+</script>
 </body>
 
 </html>
